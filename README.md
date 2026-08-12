@@ -88,7 +88,7 @@ The project follows a sequential screening architecture:
 
 
 
-Implementation completed so far:
+#Implementation completed so far:
 The current version of the AI/ML Stock Market Screener successfully integrates with the FYERS API and loads the NSE equity universe from the FYERS symbol master. The system authenticates with FYERS using an authorization-code workflow and stores the generated access token locally for subsequent API requests. It retrieves live quote data for the NSE equity universe in batches and extracts important market attributes including LTP, trading volume, bid/ask prices, OHLC values, percentage change, and average traded price. A configurable price filter is then applied to reduce the stock universe, followed by a primary liquidity filter based on traded volume, currently configured at a minimum of 1,000,000 shares. For stocks passing the volume condition, market-depth information is additionally collected and stored as informational data without rejecting stocks solely because bid or ask depth is unavailable. The resulting liquidity-qualified stocks are saved to liquidity_candidates.csv for further processing. The project also contains separate modules for historical data handling, feature engineering, technical analysis, and machine-learning processing, providing the foundation for the subsequent historical SMMA and ML-based screening stages.
 
 
